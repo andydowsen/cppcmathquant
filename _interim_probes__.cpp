@@ -1,3 +1,15 @@
+
+
+/*
+* ------------------------------------------------
+* ------------------------------------------------
+    General problems for good hand in - c++
+    proct: Portfolio 295 general problems and methods
+	YT: portfolio courses; https://www.youtube.com/watch?v=AhAz6cOl_DA&list=PLA1FTfKBAEX6dPcQitk_7uL3OwDdjMn90&index=6
+* ------------------------------------------------
+* ------------------------------------------------
+*/
+
 #include "_c_cpp_langwork_.h"
 #include <vector>
 #include <chrono>
@@ -5,6 +17,34 @@
 
 class algorithmic_sets__ {
 private:
+	static inline int equilibrium_point(std::vector<int> target_array__) {
+		int equilibrium_index_ = 0;
+		int total_sum_array__ = 0, left_sum__ = 0, right_sum__ = 0;
+		for (unsigned int i = 0; i < target_array__.size(); i++) {
+			total_sum_array__ += target_array__[i];
+		} for (unsigned int i = 0; i < target_array__.size(); i++) {
+			left_sum__ += target_array__[i];
+			right_sum__ = total_sum_array__ - left_sum__ - target_array__[i];
+			if (right_sum__ == left_sum__) {
+				equilibrium_index_ = i;
+			}
+		} return equilibrium_index_;
+	}
+	static inline void sort_bubble(std::vector<int>& target_array__) {
+		int temp_value__ = 0; 
+		for (unsigned int i = 0; i < target_array__.size() - 1; i++) {
+			for (unsigned int j = 0; j < target_array__.size() - i -1; j++){
+				if (target_array__[j] < target_array__[static_cast<std::vector<int,
+					std::allocator<int>>::size_type>(j) + 1]) {
+					temp_value__ = target_array__[j];
+					target_array__[j] = target_array__[static_cast<std::vector<int,
+						std::allocator<int>>::size_type>(j) + 1];
+					target_array__[static_cast<std::vector<int, 
+						std::allocator<int>>::size_type>(j) + 1] = temp_value__;
+				}
+			}
+		}
+	}
 	static inline void array_reversal__(std::vector<int> &target_array__) {
 		int _current_value__ = 0; 
 		for (unsigned int i = 0; i < target_array__.size() /2; i++) {
@@ -53,5 +93,6 @@ static inline int __interim_probes__main_(int argc, const char* argv[]) {
 	std::vector<int> target_array__ = { 1, 2, 3, 4, 5 };
 	const int minimum_element = general_instance__.find_minimum_in_array__(target_array__);
 	std::cout << minimum_element << std::endl;
+
 	return argc; 
 }

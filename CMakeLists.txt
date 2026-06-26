@@ -9,12 +9,12 @@ endif()
 project ("cppcmathquant")
 
 # Add source to this project's executable.
-add_executable (cppcmathquant "_c_cpp_langwork_.cpp" "_c_cpp_langwork_.h" "source/general_problems_main_.cpp" "_interim_probes__.cpp")
+add_executable (cppcmathquant "_c_cpp_langwork_.cpp" "_c_cpp_langwork_.h" "source/selector_binary_classifier_neuron_.cpp" "source/general_problems_main_.cpp" "_interim_probes__.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET cppcmathquant PROPERTY CXX_STANDARD 20)
 endif()
 
-# TODO: Add tests and install targets if = behe.
+# TODO: Add tests and install targets if = behen ke l.
 
 # bsdk 

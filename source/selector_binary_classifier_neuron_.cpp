@@ -4,6 +4,39 @@
 #include <chrono>
 #include <thread>
 
+struct Student
+{
+    std::string student_name;
+    float hoursStudied;
+    float attendance;
+    int assignmentsCompleted;
+    int passed;
+};
+
+std::vector<Student> student_dataset__ =
+{
+    {"jahnvi chaudhary", 1.5f, 62.0f, 1, 0},
+    {"anshi chaudhary", 2.0f, 25.0f, 2, 0},
+    {"yash dhiman", 3.0f, 13.0f, 3, 0},
+    {"savita singh", 0.5f, 38.0f, 0, 0},
+    {"vansh pathak", 4.0f, 68.0f, 5, 1},
+    {"sumit tyagi", 4.5f, 82.0f, 7, 1},
+    {"shivam shriwas", 5.0f, 79.0f, 6, 1},
+    {"vanshi pawariya", 5.5f, 90.0f, 8, 1},
+    {"tanya solanki", 6.0f, 95.0f, 9, 1},
+    {"kartik aggarwal", 7.0f, 88.0f, 8, 1},
+    {"Anshu naagar", 6.0f, 97.0f, 9, 1}, // High attendance & assignments compensate
+    {"garuav vishawakarma", 6.5f, 45.0f, 2, 0}, // Studies a lot but skips classes & assignments
+    {"lalit boob", 3.5f, 72.0f, 5, 1},
+    {"Jatin panwari", 2.0f, 81.0f, 7, 1},
+    {"palwinder singh", 4.5f, 50.0f, 3, 0},
+    {"Gaurav taneja", 7.5f, 97.0f,10, 1},
+    {"Vedanshi akku", 2.5f, 75.0f, 6, 0},
+    {"Prachi shekhar", 5.0f, 65.0f, 4, 1},
+    {"Mayank goel", 3.0f, 48.0f, 2, 0},
+    {"Natik sahani", 6.0f, 84.0f, 7, 1}
+};
+
 const float average_bias___         = -2.0f;
 const float weight_hours            = 0.8f;
 const float weight_attendance       = 0.3f;
@@ -63,7 +96,7 @@ public:
     }
 };
 
-int main()
+int selection_binary_run__(int argc, const char *argv[])
 {
     std::vector<performer> predictions =
         _neuron_algo_instruction__::_forward_pass__();
