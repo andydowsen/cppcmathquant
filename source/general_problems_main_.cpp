@@ -1,8 +1,27 @@
 #include<iostream>
 #include<vector>
+#include<stdio.h>
+#include <chrono>
+#include <thread>
+#include <Windows.h>
 
 class problems_prof_sec__ {
 private:
+	static inline void reverse_backoff(std::vector<int> &target_array__) {
+		int temp_value__ = 0; 
+		for (unsigned int i = 0; i < target_array__.size(); i++){
+			temp_value__ = target_array__[i];
+			target_array__[i] = target_array__[target_array__.size() - i - 1];
+			target_array__[target_array__.size() - i - 1] = temp_value__;
+		}
+	}
+	static inline int _calculate_average__array__(std::vector<int> &_array_work__) {
+		float _average_array__ = 0, array_sm__ = 0;;
+		for (unsigned int i = 0; i < _array_work__.size(); i++) {
+			array_sm__ += _array_work__[i];
+		} _average_array__ = ((array_sm__) / (_array_work__.size()));
+		return _average_array__;
+	}
 	static inline void merge_sort__array__(std::vector<int> target_array_,
 		int _left_values, int _mid_values, int right_values) {
 		int num_1 = _mid_values - _left_values + 1;
@@ -63,24 +82,30 @@ private:
 				}
 			}
 		}
+	} static inline int _replace_zero_num__(int negate_number__) {
+		if (negate_number__ == 0) return 5;
+		std::vector<int> by_parts_numbers; 
+		while (negate_number__ > 0) {
+			by_parts_numbers.push_back(negate_number__ % 10);
+			Beep(900, 20);
+			negate_number__ /= 10;
+		} for (unsigned int i = 0; i < by_parts_numbers.size(); i++) {
+			if (by_parts_numbers[i] == 0) {
+				by_parts_numbers[i] = 5; 
+			}
+		} 
+		std::reverse(by_parts_numbers);
+		for (unsigned int i = 0; i < by_parts_numbers.size(); i++) {
+			std::cout << by_parts_numbers[i] << std::endl;
+		}
 	}
 public:
-	static inline void __implement_equilibrium_point__() {
-		std::vector<int> target_array = { 1, 2, 0, 3 };
-		std::cout << equilibrium_point__(target_array);
-	}
-	static inline void implement_bubble_sort__() {
-		std::vector<int> sort_array__ = { 2, 5, 6, 2, 4,2, 1 };
-		sort_bubble_(sort_array__);
-		std::cout << "{ ";
-		for (int i : sort_array__) {
-			std::cout << i << ",";
-		}
-		std::cout << " } \n";
-	}
+	static inline void _implementations_of_private_functions__() {
+		int return_value = _replace_zero_num__(1005);
+	} 
 };
 
 static inline int __main__general_problems__(int argc, const char* argv[]) {
-	problems_prof_sec__::__implement_equilibrium_point__();
-	return argc;
+	problems_prof_sec__::_implementations_of_private_functions__();
+ 	return argc;
 }

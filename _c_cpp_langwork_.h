@@ -1,13 +1,11 @@
-﻿#pragma once
-#include <iostream>
+﻿#include <iostream>
 #include <stdio.h>
 #include <vector>
 
 static inline int __factorial_calculate(int _integer) {
 	if (_integer == 0 || _integer == 1) {
 		return 1;
-	}
-	else {
+	} else {
 		return _integer * __factorial_calculate(_integer - 1);
 	}
 }

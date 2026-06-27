@@ -1,5 +1,4 @@
 ﻿#include "./_interim_probes__.cpp"
-#include "./_c_cpp_langwork_.h"
 #include "source/general_problems_main_.cpp"
 #include <stdlib.h>
 #include <thread>
@@ -34,8 +33,8 @@ static inline void __pointer_points() {
 
 
 int main(int argc, const char* argv[]) {
-	//__main__general_problems__(argc, argv);
+	__main__general_problems__(argc, argv);
 	//_pointer__arithmetic__();
-	__interim_probes__main_(argc, argv); 
+	//__interim_probes__main_(argc, argv); 
 	return argc;
 }
