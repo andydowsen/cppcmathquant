@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <vector>
 
+
 static inline int __factorial_calculate(int _integer) {
 	if (_integer == 0 || _integer == 1) {
 		return 1;

@@ -94,7 +94,6 @@ private:
 				by_parts_numbers[i] = 5; 
 			}
 		} 
-		std::reverse(by_parts_numbers);
 		for (unsigned int i = 0; i < by_parts_numbers.size(); i++) {
 			std::cout << by_parts_numbers[i] << std::endl;
 		}

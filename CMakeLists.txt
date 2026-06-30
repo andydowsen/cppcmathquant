@@ -15,6 +15,8 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET cppcmathquant PROPERTY CXX_STANDARD 20)
 endif()
 
-# TODO: Add tests and install targets if = behen ke l.
+ find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
+ target_link_libraries(cppcmathquant PRIVATE SFML::Network SFML::Graphics SFML::Window SFML::Audio SFML::System)
 
-# bsdk 
+  # If you want SFML to provide an implementation of main():
+    target_link_libraries(cppcmathquant PRIVATE SFML::Audio)
