@@ -12,7 +12,7 @@ private:
 		}
 	}
 	static inline int _calculate_average__array__(std::vector<int> &_array_work__) {
-		float _average_array__ = 0, array_sm__ = 0;;
+		int _average_array__ = 0, array_sm__ = 0;
 		for (unsigned int i = 0; i < _array_work__.size(); i++) {
 			array_sm__ += _array_work__[i];
 		} _average_array__ = ((array_sm__) / (_array_work__.size()));

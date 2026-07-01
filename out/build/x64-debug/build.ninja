@@ -89,6 +89,16 @@ build CMakeFiles\cppcmathquant.dir\_interim_probes__.cpp.obj: CXX_COMPILER__cppc
   TARGET_PDB = cppcmathquant.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\cppcmathquant.dir
 
+build CMakeFiles\cppcmathquant.dir\source\oopstruct\oopstruct.cpp.obj: CXX_COMPILER__cppcmathquant_unscanned_Debug C$:\Users\andyd\source\repos\cppcmathquant\source\oopstruct\oopstruct.cpp || cmake_object_order_depends_target_cppcmathquant
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
+  INCLUDES = -external:IC:\Users\andyd\source\repos\cppcmathquant\out\build\x64-debug\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\cppcmathquant.dir
+  OBJECT_FILE_DIR = CMakeFiles\cppcmathquant.dir\source\oopstruct
+  TARGET_COMPILE_PDB = CMakeFiles\cppcmathquant.dir\
+  TARGET_PDB = cppcmathquant.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\cppcmathquant.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target cppcmathquant
@@ -97,7 +107,7 @@ build CMakeFiles\cppcmathquant.dir\_interim_probes__.cpp.obj: CXX_COMPILER__cppc
 #############################################
 # Link the executable cppcmathquant.exe
 
-build cppcmathquant.exe: CXX_EXECUTABLE_LINKER__cppcmathquant_Debug CMakeFiles\cppcmathquant.dir\_c_cpp_langwork_.cpp.obj CMakeFiles\cppcmathquant.dir\source\selector_binary_classifier_neuron_.cpp.obj CMakeFiles\cppcmathquant.dir\source\general_problems_main_.cpp.obj CMakeFiles\cppcmathquant.dir\_interim_probes__.cpp.obj | vcpkg_installed\x64-windows\debug\lib\sfml-network-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-graphics-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-window-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-audio-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-system-d.lib C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36418\include\manifest\segmentheap.manifest
+build cppcmathquant.exe: CXX_EXECUTABLE_LINKER__cppcmathquant_Debug CMakeFiles\cppcmathquant.dir\_c_cpp_langwork_.cpp.obj CMakeFiles\cppcmathquant.dir\source\selector_binary_classifier_neuron_.cpp.obj CMakeFiles\cppcmathquant.dir\source\general_problems_main_.cpp.obj CMakeFiles\cppcmathquant.dir\_interim_probes__.cpp.obj CMakeFiles\cppcmathquant.dir\source\oopstruct\oopstruct.cpp.obj | vcpkg_installed\x64-windows\debug\lib\sfml-network-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-graphics-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-window-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-audio-d.lib vcpkg_installed\x64-windows\debug\lib\sfml-system-d.lib C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36418\include\manifest\segmentheap.manifest
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console

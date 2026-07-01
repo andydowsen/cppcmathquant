@@ -1,5 +1,6 @@
 ﻿#include "./_interim_probes__.cpp"
 #include "source/general_problems_main_.cpp"
+#include "source/oopstruct/oopstruct.cpp"
 
 static void _fibonacci_iterative__(const int fibonacci_calculate_count__) {
 	int _total_fibonacci_count = 0;
@@ -36,6 +37,6 @@ static int factorial_recursion_count__(int _integral_number__) {
 }
 	
 int main(int argc, const char* argv[]) {
-	_fibonacci_iterative__(6);
+	__oopstruct_main__();
 	return argc;
 }

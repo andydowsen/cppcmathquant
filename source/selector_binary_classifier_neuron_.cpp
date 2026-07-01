@@ -93,7 +93,7 @@ public:
     }
 };
 
-int selection_binary_run__(int argc, const char *argv[])
+static int selection_binary_run__(int argc, const char *argv[])
 {
     std::vector<performer> predictions =
         _neuron_algo_instruction__::_forward_pass__();
