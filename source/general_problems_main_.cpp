@@ -1,8 +1,4 @@
-#include<iostream>
-#include<vector>
-#include<stdio.h>
-#include <chrono>
-#include <thread>
+#include "../_c_cpp_langwork_.h"
 #include <Windows.h>
 
 class problems_prof_sec__ {

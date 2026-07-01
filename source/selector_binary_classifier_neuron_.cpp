@@ -1,8 +1,5 @@
-#include <iostream>
-#include <vector>
 #include <cmath>
-#include <chrono>
-#include <thread>
+#include "../_c_cpp_langwork_.h"
 
 struct Student
 {

@@ -1,15 +1,7 @@
 ﻿#include "./_interim_probes__.cpp"
 #include "source/general_problems_main_.cpp"
-#include <stdlib.h>
-#include <thread>
-#include <SFML/Audio.hpp>
-#include <Windows.h>
-#include <chrono>
-#include <iostream>
-#include <string>
 
 static void _fibonacci_iterative__(const int fibonacci_calculate_count__) {
-	// fn = fn-1 + fn-2; 
 	int _total_fibonacci_count = 0;
 	int _fibonacci_n_dash_one = 0, _fibonacci_n_dash_two = 1, _fibonacci_n = 0;
 	for (unsigned int i = 0; i < fibonacci_calculate_count__; i++) {
@@ -17,7 +9,7 @@ static void _fibonacci_iterative__(const int fibonacci_calculate_count__) {
 		_fibonacci_n_dash_two = _fibonacci_n_dash_one;
 		_fibonacci_n_dash_one = _fibonacci_n;
 		_total_fibonacci_count = _fibonacci_n;
-	} std::cout << "The total fibonacci count is: " << _total_fibonacci_count << std::endl;
+	} 
 }
 
 static inline int _overload_additive_function__(const int first_int__, const int second__int__) {
