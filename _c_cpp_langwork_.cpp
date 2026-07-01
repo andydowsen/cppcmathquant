@@ -8,62 +8,42 @@
 #include <iostream>
 #include <string>
 
-const std::string path_name_ = "C:/Users/andyd/source/repos/cppcmathquant/airbus-stall.wav";
-static void _sound_push_() {
-	sf::SoundBuffer _sound_buffer__;
-	sf::Sound _sound_instance__(_sound_buffer__);
-	if (!_sound_buffer__.loadFromFile(path_name_)) { 
-		std::abort;
-	}  _sound_instance__.play();	
-	_sound_instance__.setLooping(true);
-	while (_sound_instance__.getStatus() == sf::Sound::Status::Playing) {
-		std::this_thread::yield();
-	}
+static void _fibonacci_iterative__(const int fibonacci_calculate_count__) {
+	// fn = fn-1 + fn-2; 
+	int _total_fibonacci_count = 0;
+	int _fibonacci_n_dash_one = 0, _fibonacci_n_dash_two = 1, _fibonacci_n = 0;
+	for (unsigned int i = 0; i < fibonacci_calculate_count__; i++) {
+		_fibonacci_n = _fibonacci_n_dash_one + _fibonacci_n_dash_two;
+		_fibonacci_n_dash_two = _fibonacci_n_dash_one;
+		_fibonacci_n_dash_one = _fibonacci_n;
+		_total_fibonacci_count = _fibonacci_n;
+	} std::cout << "The total fibonacci count is: " << _total_fibonacci_count << std::endl;
 }
 
-typedef struct _ecam_plan__ {
-	int vertical_speed__lift__;
-	int _altitude;
-};
-
-static inline void _pointer__arithmetic__() {
-	int arr_phase[1000] = { 0 };
-	int iterator_random_integer_push = 0;
-	while (iterator_random_integer_push < 1000) {
-		int random_generator__ = rand();
-		arr_phase[iterator_random_integer_push] = random_generator__;
-		std::cout << "ending crash value: " << iterator_random_integer_push << std::endl;
-		iterator_random_integer_push++;
-	}
-	std::this_thread::sleep_for(std::chrono::milliseconds(2000)); // sleep the thread
-	Beep(750, 323);
-	const int* first_element__ = arr_phase;
-	for (unsigned int i = 0; i < int(sizeof(arr_phase) / sizeof(arr_phase[0])); i++) {
-		std::cout << *(first_element__ + i) << std::endl; // pointer arithemetic
-	}
+static inline int _overload_additive_function__(const int first_int__, const int second__int__) {
+	return first_int__ + second__int__;
+} static inline int _overload_additive_function(const int first_int__, const int second__int__, const int third_int__) {
+	return first_int__ + second__int__ + third_int__;
 }
 
-static inline void __pointer_points() {
-	int a = 3;
-	int* b;
-	b = &a;
-	int** pointer_pointer = &b;
-	std::cout << "Pointer pointer: " << pointer_pointer;
-	std::cout << "Address of a " << &a;
+static int _fibonacci_recurse_count(int fibonacci_count__) {
+	if (fibonacci_count__ < 2) {
+		return 1; 
+	} else {
+		return _fibonacci_recurse_count(fibonacci_count__ - 1) + 
+			_fibonacci_recurse_count(fibonacci_count__ - 2);
+	}
+} 
+
+static int factorial_recursion_count__(int _integral_number__) {
+	if (_integral_number__ == 0 || _integral_number__ == 1) {
+		return 1; 
+	} else {
+		return _integral_number__ * factorial_recursion_count__(_integral_number__ - 1);
+	}
 }
-
-
-	//_pointer__arithmetic__();
-	//__main__general_problems__(argc, argv);
-	//__interim_probes__main_(argc, argv); 
+	
 int main(int argc, const char* argv[]) {
-	_ecam_plan__ plan_set__{};
-	int flight_time_duration__ = 6;
-	for (unsigned int i = 0; i < flight_time_duration__; i++) {
-		plan_set__.vertical_speed__lift__ += exp(i);
-		if (plan_set__.vertical_speed__lift__ <= 300) { _sound_push_(); };
-		std::this_thread::sleep_for(std::chrono::seconds(2));
-		std::cout << "Vertical speed : " << plan_set__.vertical_speed__lift__ << std::endl;
-	}
+	_fibonacci_iterative__(6);
 	return argc;
 }
